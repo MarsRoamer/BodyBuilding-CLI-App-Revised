@@ -1,9 +1,11 @@
 class BodybuildingApp::CLI
 
-	attr_accessor :parts
+	attr_reader :parts
+	@parts = []
 
 	def call
 		# puts "List of bodyparts"
+
 		@parts = BodybuildingApp::BodyParts.make_body_parts
 		list_body_parts
 		menu
@@ -14,8 +16,9 @@ class BodybuildingApp::CLI
 		@parts.each do |element|
 			puts "#{i}. #{element[:body_part]}"
 			i +=1
-			binding.pry
+			
 		end
+		binding.pry
 		
 	    
 	end
@@ -31,7 +34,7 @@ class BodybuildingApp::CLI
 			when "list"
 				list_body_parts
 			when "1"
-				puts "display exercises for bodypart 1"
+				# puts @parts[0]
 			when "2"
 				puts "display exercises  for bodypart 2"
 			end

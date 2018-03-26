@@ -30,14 +30,19 @@ class Scraper
   def self.exercise_importer(user_selection)
     html = open(user_selection)
     doc = Nokogiri::HTML(html)
+    arr = []
 
    
-    test = doc.css('.ExCategory-results')
+    # test = doc.css('.ExCategory-results')
+    test = doc.css('.ExCategory-results div h3')
 
     test.each do |element|
-      puts element.css('div h3').text
+      # puts element.css('div h3').text
+      arr << element.text.strip
+      
       
     end
+    arr
   end
 
 
