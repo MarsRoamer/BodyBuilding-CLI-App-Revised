@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require './lib/bodybuilding_app'
+
+BodybuildingApp::CLI.new.call
+
+# BodybuildingApp::BodyParts.make_body_parts
