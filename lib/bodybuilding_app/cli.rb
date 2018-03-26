@@ -1,18 +1,20 @@
 class BodybuildingApp::CLI
 
+	attr_accessor :parts
+
 	def call
 		# puts "List of bodyparts"
-		BodybuildingApp::BodyParts.make_body_parts
+		@parts = BodybuildingApp::BodyParts.make_body_parts
 		list_body_parts
 		menu
 	end
 
 	def list_body_parts
 		i = 1
-		BodybuildingApp::BodyParts.all.each do |element|
-			puts "#{i}. #{element.name}"
+		@parts.each do |element|
+			puts "#{i}. #{element[:body_part]}"
 			i +=1
-			# binding.pry
+			binding.pry
 		end
 		
 	    

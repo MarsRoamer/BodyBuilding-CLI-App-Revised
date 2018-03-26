@@ -1,0 +1,4 @@
+class BodybuildingApp::Exercises
+
+
+end
