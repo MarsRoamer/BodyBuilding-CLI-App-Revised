@@ -17,13 +17,7 @@ class Scraper
       hash[:body_part] = part
       hash[:url] = 'https://www.bodybuilding.com' + element.css('a')[0]['href']
       body_parts << hash
-    end
-    
-    # body_parts.each do |element|
-    #   puts element[:body_part]
-    
-    # end
-   
+    end 
      body_parts
   end 
 
@@ -31,16 +25,9 @@ class Scraper
     html = open(user_selection)
     doc = Nokogiri::HTML(html)
     arr = []
-
-   
-    # test = doc.css('.ExCategory-results')
     test = doc.css('.ExCategory-results div h3')
-
     test.each do |element|
-      # puts element.css('div h3').text
-      arr << element.text.strip
-      
-      
+      arr << element.text.strip         
     end
     arr
   end

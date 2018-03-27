@@ -6,12 +6,12 @@ require "bodybuilding_app/version"
 Gem::Specification.new do |spec|
   spec.name          = "bodybuilding_app"
   spec.version       = BodybuildingApp::VERSION
-  spec.authors       = ["Jn"]
+  spec.authors       = ["Jonathan Tiede"]
   spec.email         = ["skysoldiermars@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{TODO: Shows the user a list of bodyparts, the user selects a body part and the app return a list of exercises}
+  # spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.homepage      = "https://github.com/MarsRoamer/BodyBuilding-CLI-App-Revised"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
